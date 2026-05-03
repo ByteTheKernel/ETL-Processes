@@ -1,0 +1,75 @@
+[
+  {
+    "station_id": "iot-msk-001",
+    "location": "Moscow, Arbat district",
+    "datetime": "2024-11-10 06:00:00",
+    "readings": [
+      {"sensor_type": "temperature", "value": -2.5, "unit": "C", "status": "ok"},
+      {"sensor_type": "humidity",    "value": 82.3, "unit": "%", "status": "ok"},
+      {"sensor_type": "pressure",    "value": 1018.4, "unit": "hPa", "status": "ok"},
+      {"sensor_type": "wind_speed",  "value": 5.1, "unit": "m/s", "status": "ok"}
+    ],
+    "alerts": [
+      {"level": "info", "code": "A001", "message": "Normal operation"}
+    ]
+  },
+  {
+    "station_id": "iot-msk-002",
+    "location": "Moscow, Sokolniki district",
+    "datetime": "2024-11-10 06:00:00",
+    "readings": [
+      {"sensor_type": "temperature", "value": -3.1, "unit": "C", "status": "ok"},
+      {"sensor_type": "humidity",    "value": 79.8, "unit": "%", "status": "ok"},
+      {"sensor_type": "pressure",    "value": 1017.9, "unit": "hPa", "status": "warning"},
+      {"sensor_type": "wind_speed",  "value": 7.3, "unit": "m/s", "status": "ok"}
+    ],
+    "alerts": [
+      {"level": "warning", "code": "A002", "message": "Pressure drop detected"},
+      {"level": "info",    "code": "A001", "message": "Station battery at 42%"}
+    ]
+  },
+  {
+    "station_id": "iot-spb-001",
+    "location": "Saint Petersburg, Vasilyevsky Island",
+    "datetime": "2024-11-10 06:00:00",
+    "readings": [
+      {"sensor_type": "temperature", "value": 1.2, "unit": "C", "status": "ok"},
+      {"sensor_type": "humidity",    "value": 91.5, "unit": "%", "status": "ok"},
+      {"sensor_type": "pressure",    "value": 1009.1, "unit": "hPa", "status": "ok"},
+      {"sensor_type": "wind_speed",  "value": 12.6, "unit": "m/s", "status": "critical"}
+    ],
+    "alerts": [
+      {"level": "critical", "code": "A003", "message": "Wind speed exceeds 12 m/s"},
+      {"level": "info",     "code": "A001", "message": "Normal temperature range"}
+    ]
+  },
+  {
+    "station_id": "iot-ekb-001",
+    "location": "Yekaterinburg, Leninsky district",
+    "datetime": "2024-11-10 06:00:00",
+    "readings": [
+      {"sensor_type": "temperature", "value": -8.4, "unit": "C", "status": "ok"},
+      {"sensor_type": "humidity",    "value": 68.2, "unit": "%", "status": "ok"},
+      {"sensor_type": "pressure",    "value": 1024.7, "unit": "hPa", "status": "ok"},
+      {"sensor_type": "wind_speed",  "value": 3.0, "unit": "m/s", "status": "ok"}
+    ],
+    "alerts": [
+      {"level": "info", "code": "A001", "message": "Normal operation"}
+    ]
+  },
+  {
+    "station_id": "iot-nsk-001",
+    "location": "Novosibirsk, Akademgorodok",
+    "datetime": "2024-11-10 06:00:00",
+    "readings": [
+      {"sensor_type": "temperature", "value": -14.2, "unit": "C", "status": "ok"},
+      {"sensor_type": "humidity",    "value": 60.1, "unit": "%", "status": "ok"},
+      {"sensor_type": "pressure",    "value": 1031.3, "unit": "hPa", "status": "ok"},
+      {"sensor_type": "wind_speed",  "value": 1.8, "unit": "m/s", "status": "ok"}
+    ],
+    "alerts": [
+      {"level": "info", "code": "A001", "message": "Normal operation"},
+      {"level": "info", "code": "A004", "message": "Low temperature advisory"}
+    ]
+  }
+]
