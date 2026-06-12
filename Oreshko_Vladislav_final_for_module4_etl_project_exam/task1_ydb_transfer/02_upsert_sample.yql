@@ -1,0 +1,23 @@
+-- ============================================================
+-- Задание 1: Загрузка данных в YDB через UPSERT (batch)
+-- Запускается по частям из YQL-редактора или через Python-скрипт
+-- ============================================================
+
+-- Пример одного батча (5 строк).
+-- Реальная загрузка производится Python-скриптом load_via_ydb_sdk.py
+
+UPSERT INTO transactions_v2
+    (call_id, call_time, client_id, region_code,
+     campaign_type, call_status, client_response,
+     duration_sec, follow_up_required)
+VALUES
+    ("call_20260501_000001", "2026-05-01 11:42:15", "client_4412", "DE-HE",
+     "credit_card_offer",  "answered",    "interested",         184, "true"),
+    ("call_20260501_000002", "2026-05-01 12:10:03", "client_7821", "DE-BY",
+     "personal_loan",      "no_answer",   "no_response",          8, "false"),
+    ("call_20260501_000003", "2026-05-01 13:05:44", "client_3305", "DE-NW",
+     "mortgage_offer",     "answered",    "callback_requested", 310, "true"),
+    ("call_20260501_000004", "2026-05-01 14:30:22", "client_9910", "DE-BW",
+     "savings_account",    "busy",        "no_response",         12, "false"),
+    ("call_20260501_000005", "2026-05-01 15:00:01", "client_5567", "DE-NI",
+     "investment_product", "answered",    "not_interested",     122, "false");

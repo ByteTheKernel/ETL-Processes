@@ -1,0 +1,18 @@
+-- ============================================================
+-- Задание 1: Создание таблицы transactions_v2 в Yandex Database
+-- Запускается в YDB Console (YQL-редактор) или через YDB CLI
+-- ============================================================
+
+-- 1. Создание таблицы
+CREATE TABLE transactions_v2 (c:\Users\vlado\Downloads\02_upsert_sample.yql
+    call_id          Utf8,
+    call_time        Utf8,          -- храним как строку для совместимости с CSV-импортом
+    client_id        Utf8,
+    region_code      Utf8,
+    campaign_type    Utf8,
+    call_status      Utf8,
+    client_response  Utf8,
+    duration_sec     Int32,
+    follow_up_required Utf8,
+    PRIMARY KEY (call_id)
+);

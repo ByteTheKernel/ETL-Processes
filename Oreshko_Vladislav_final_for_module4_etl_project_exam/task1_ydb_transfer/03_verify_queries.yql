@@ -1,0 +1,40 @@
+-- ============================================================
+-- Задание 1: Проверочные запросы после загрузки данных
+-- ============================================================
+
+-- 1. Общее количество записей
+SELECT COUNT(*) AS total_records
+FROM transactions_v2;
+
+-- 2. Распределение по регионам
+SELECT
+    region_code,
+    COUNT(*) AS call_count
+FROM transactions_v2
+GROUP BY region_code
+ORDER BY call_count DESC;
+
+-- 3. Распределение по статусам звонков
+SELECT
+    call_status,
+    COUNT(*) AS cnt,
+    AVG(CAST(duration_sec AS Double)) AS avg_duration
+FROM transactions_v2
+GROUP BY call_status
+ORDER BY cnt DESC;
+
+-- 4. Топ кампаний по интересу клиентов
+SELECT
+    campaign_type,
+    COUNT(*) AS total,
+    SUM(CASE WHEN client_response = 'interested' THEN 1 ELSE 0 END) AS interested_count
+FROM transactions_v2
+GROUP BY campaign_type
+ORDER BY interested_count DESC;
+
+-- 5. Процент follow_up
+SELECT
+    follow_up_required,
+    COUNT(*) AS cnt
+FROM transactions_v2
+GROUP BY follow_up_required;
